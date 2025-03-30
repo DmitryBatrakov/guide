@@ -79,6 +79,7 @@ const WelcomePage = () => {
                         onClick={(e) => {
                             e.preventDefault();
                             setSelectedDay(day);
+                            window.scrollTo(0, 0);
                         }
                         }
                     >
