@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import WelcomePage from "./Pages/WelocomePage/WelcomePage";
+import Larnaca from './Pages/Larnaca/Larnaca';
+import Nicosia from './Pages/Nicosia/Nicosia';
+import Limassol from './Pages/Limassol/Limassol';
+
 import './App.css';
+import Header from "./component/header/Header";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <Header/>
+            <Routes>
+                <Route path="/" element={<WelcomePage />} />
+                <Route path="/day1" element={<Larnaca />} />
+                <Route path="/day2" element={<Nicosia />} />
+                <Route path="/day3" element={<Limassol />} />
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;
