@@ -42,9 +42,9 @@ const DayPage = ({
             <div className="">
                 <Link
                     to="/"
-                    className="text-xl m-2 pl-2 flex flex-row justify-start items-center gap-3">
+                    className="text-xl m-2 pl-2 flex flex-row justify-start items-center gap-3 text-gray-700">
                     <FaArrowLeftLong />
-                    <span className="text-lg text-center"> На главную</span>
+                    <span className="text-lg text-center text-gray-700"> На главную</span>
                 </Link>
             </div>
             <div className="p-2 ">
@@ -72,7 +72,7 @@ const DayPage = ({
                     <div className="mb-6 border-b-2 border-gray-400">
                         <button
                             onClick={() => setShowRestaurants(!showRestaurants)}
-                            className="text-xl text-left w-full text-gray-800 font-medium mb-2  flex justify-between m-2 pr-2 "
+                            className="text-xl text-left w-full text-gray-600 font-medium mb-2  flex justify-between m-2 pr-2 "
                         >
                             Рестораны
                             {showRestaurants ? <HiChevronUp size={24} /> : <HiChevronDown size={24} />}
@@ -82,7 +82,7 @@ const DayPage = ({
                             restaurants.map((r, i) => (
                                 <div key={i} className="bg-white rounded-xl shadow-md p-4 mb-4">
                                     <img src={r.image} alt="#" className="rounded-xl w-full h-96 object-cover" />
-                                    <p className="text-gray-500 font-medium pt-2 pb-2 text-2xl text-center">{r.name}</p>
+                                    <p className="text-gray-700 font-medium pt-2 pb-2 text-2xl text-center">{r.name}</p>
                                     <CardFooter links={r.links} tripIcon={tripIcon} />
                                 </div>
                             ))}
@@ -92,7 +92,7 @@ const DayPage = ({
                     <div className="mb-6 border-b-2 border-gray-400">
                         <button
                             onClick={() => setShowCafes(!showCafes)}
-                            className="text-xl text-left w-full text-gray-800 font-medium mb-2 flex justify-between m-2 pr-2 "
+                            className="text-xl text-left w-full text-gray-600 font-medium mb-2 flex justify-between m-2 pr-2 "
                         >
                             Кафе
                             {showCafes ? <HiChevronUp size={24} /> : <HiChevronDown size={24} />}
@@ -102,7 +102,7 @@ const DayPage = ({
                             cafes.map((c, i) => (
                                 <div key={i} className="bg-white rounded-xl shadow-md p-4 mb-4">
                                     <img src={c.image} alt="#" className="rounded-xl w-full h-96 object-cover" />
-                                    <p className="text-gray-500 font-medium pt-2 pb-2 text-2xl text-center">{c.name}</p>
+                                    <p className="text-gray-700 font-medium pt-2 pb-2 text-2xl text-center">{c.name}</p>
                                     <CardFooter links={c.links} tripIcon={tripIcon} />
                                 </div>
                             ))}
@@ -113,7 +113,7 @@ const DayPage = ({
                         <div className="mb-6 border-b-2 border-gray-400">
                             <button
                                 onClick={() => setShowPlaces(!showPlaces)}
-                                className="text-xl text-left w-full text-gray-800 font-medium mb-2 flex justify-between m-2 pr-2 "
+                                className="text-xl text-left w-full text-gray-600 font-medium mb-2 flex justify-between m-2 pr-2 "
                             >
                                 Места для прогулок
                                 {showPlaces ? <HiChevronUp size={24} /> : <HiChevronDown size={24} />}
@@ -123,7 +123,7 @@ const DayPage = ({
                                 places.map((p, i) => (
                                     <div key={i} className="bg-white rounded-xl shadow-md p-4 mb-4">
                                         <img src={p.image} alt="#" className="rounded-xl w-full h-96 object-cover" />
-                                        <p className="text-gray-500 font-medium pt-2 pb-2 text-2xl text-center">{p.name}</p>
+                                        <p className="text-gray-700 font-medium pt-2 pb-2 text-2xl text-center">{p.name}</p>
                                         <CardFooter links={p.links} tripIcon={tripIcon} />
                                     </div>
                                 ))}
