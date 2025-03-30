@@ -86,7 +86,7 @@ const WelcomePage = () => {
                         <img
                             src={day.image}
                             alt={day.title}
-                            className="w-full h-64 object-cover"
+                            className="w-full h-72 object-cover"
                         />
                         <div className="p-4 text-center text-lg font-medium text-gray-800">
                             {day.title}
