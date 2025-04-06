@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaMapLocationDot } from "react-icons/fa6";
 import { FaHouseChimney } from "react-icons/fa6";
+import { IoMdClose } from "react-icons/io";
 import { FaMusic } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
@@ -12,7 +13,16 @@ const Footer = () => {
 
     console.log("Selected:", selected);
 
-
+    useEffect(() => {
+        if (selected) {
+            document.body.classList.add("overflow-hidden");
+        } else {
+            document.body.classList.remove("overflow-hidden");
+        }
+        return () => {
+            document.body.classList.remove("overflow-hidden");
+        };
+    }, [selected]);
 
 
     return (
@@ -50,7 +60,7 @@ const Footer = () => {
             </div>
             {selected && (
                 <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
-                    <div className="fixed flex-col gap-4 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-black rounded-xl p-6 w-11/12  max-w-sm text-center shadow-xl z-50 flex justify-around ">
+                    <div className="fixed flex-col gap-4 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-black rounded-xl p-6 w-11/12 h-48 max-w-sm text-center shadow-xl z-50 flex justify-around ">
                         <div className='flex justify-around items-center'>
                             <div className="flex flex-col items-center justify-center">
                                 <Link
@@ -74,13 +84,13 @@ const Footer = () => {
                                 </p>
                             </div>
                         </div>
-                        <div>
+                        <div className='absolute top-2 right-2'>
                             <button
                                 type="button"
-                                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded"
+                                className=" px-1 py-1 bg-red-600 rounded-2xl text-white"
                                 onClick={() => setSelected(false)}
                             >
-                                Закрыть
+                                <IoMdClose size={20}/>
                             </button>
                         </div>
                     </div>
