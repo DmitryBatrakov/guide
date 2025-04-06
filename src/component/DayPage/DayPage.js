@@ -94,7 +94,7 @@ const DayPage = ({
                             onClick={() => setShowCafes(!showCafes)}
                             className="text-xl text-left w-full text-gray-600 font-medium mb-2 flex justify-between m-2 pr-2 "
                         >
-                            Кафе
+                            Кофейни
                             {showCafes ? <HiChevronUp size={24} /> : <HiChevronDown size={24} />}
                         </button>
 
