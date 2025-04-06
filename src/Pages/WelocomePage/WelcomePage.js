@@ -79,7 +79,6 @@ const WelcomePage = () => {
                         onClick={(e) => {
                             e.preventDefault();
                             setSelectedDay(day);
-                            window.scrollTo(0, 0);
                         }
                         }
                     >
@@ -102,7 +101,11 @@ const WelcomePage = () => {
                         <div className="flex flex-col gap-2 mt-4">
                             <button
                                 className="px-4 py-2 bg-green-500 text-white rounded-md"
-                                onClick={() => setSelectedDay(navigate(selectedDay.route))}
+                                // onClick={() => setSelectedDay(navigate(selectedDay.route))}
+                                onClick={() => {
+                                    window.scrollTo(0, 0); // Скролл вверх при нажатии на кнопку
+                                    navigate(selectedDay.route);
+                                }}
                             >
                                 {selectedDay.btnTwo}
                             </button>
