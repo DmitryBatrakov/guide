@@ -27,59 +27,53 @@ const Footer = () => {
 
     return (
         <footer className="h-auto flex flex-col justify-around items-center text-white bg-blue-600 ">
-            <div className="flex justify-around w-full p-4">
+            <div className="flex justify-around w-full pt-5 pl-4 pr-4">
                 <div className="text-white flex flex-col items-center justify-center">
                     <button
                         type="button"
-                        className="flex flex-col gap-2 text-xl items-center justify-center"
+                        className="flex flex-col gap-2 text-lg items-center justify-center"
                         onClick={() => setSelected(true)}
                     >
-                        <FaHouseChimney size={44} />
+                        <FaHouseChimney size={40} />
                         <span>Дом</span>
                     </button>
                 </div>
-                <div className="flex flex-col text-xl items-center  justify-center">
+                <div className="flex flex-col  items-center  justify-center">
                     <Link
                         to={linkMusic}
-                        className="flex flex-col text-xl gap-2 items-center justify-center"
+                        className="flex flex-col text-lg gap-2 items-center justify-center"
                     >
                         <FaMusic size={40} />
                         <span>Концерт</span>
                     </Link>
                 </div>
             </div>
-            {/* <div className="border-t-[1px] border-white w-full"></div> */}
             <div className="w-full text-left p-4 h-auto flex flex-col gap-3">
-                {/* <div className="">
-                    <span>Жалобы, предложение и благодарсности принимаются на почту: </span>
-                    <span><b>dmitrybatrakov24@outlook.com</b></span>
-                </div> */}
-                {/* <span className="text-center"><b>dmitrybatrakov24@outlook.com</b></span> */}
                 <div className="border-t-[1px] border-white w-full"></div>
                 <span className="">Разработано Dima & Co. Guide CYtrip © 2025</span>
             </div>
             {selected && (
                 <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
                     <div className="fixed flex-col gap-4 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-black rounded-xl p-6 w-11/12 h-48 max-w-sm text-center shadow-xl z-50 flex justify-around ">
-                        <div className='flex justify-around items-center'>
+                        <div className='flex gap-5 justify-around items-center'>
                             <div className="flex flex-col items-center justify-center">
                                 <Link
                                     to={linkHouse}
                                 >
-                                    <FaMapLocationDot size={50} color="green" />
+                                    <FaMapLocationDot size={40} color="green" />
                                 </Link>
                                 <span className="text-center text-stone-600 text-xl font-semibold">
                                     Точка
                                 </span>
                             </div>
-                            <div className="text-left checked flex flex-col justify-center items-left">
-                                <p>
+                            <div className="text-left flex flex-col justify-center items-left">
+                                <p className="text-xl">
                                     <b>Код :</b> #2601
                                 </p>
-                                <p>
+                                <p className="text-xl">
                                     <b>Квартира :</b> №204
                                 </p>
-                                <p>
+                                <p className="text-xl">
                                     <b>Сейф :</b> 6302
                                 </p>
                             </div>
