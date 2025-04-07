@@ -25,7 +25,7 @@ export const larnacaData = {
             name: "The Enigma Restobar",
             image: "/images/larnaca/restaurants/enigmabar.jpg",
             links: {
-                instagram: "https://www.instagram.com/explore/locations/135649400251726/the-enigma-restobar/",
+                instagram: "https://www.instagram.com/enigmarestobar_mackenzie/",
                 tripadvisor: "https://www.tripadvisor.com/Restaurant_Review-g190379-d8725449-Reviews-The_Enigma_Restobar-Larnaca_Larnaka_District.html",
                 waze: "https://www.waze.com/ru/live-map/directions/cy/larnaca/larnaca/the-enigma-restobar?to=place.ChIJ3aDZ9MKC4BQRZIADph2fS6A",
             },
